@@ -52,9 +52,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'blogicum.urls'
-
 TEMPLATES_DIR = BASE_DIR / 'templates'
-
+STATICFILES_DIRS = [BASE_DIR / 'templates/static']
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -121,10 +120,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-]
+STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
